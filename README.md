@@ -1,4 +1,4 @@
-# consistency_calibration_study_01a88658
+# model_hot_swap_consistency_calibration
 
 （数据平台场景）在模型热切换的一致性上，哪些输入看起来正常但结论是错的？用口径一致性比对构造可复现的误判样例。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python consistency_calibration_study_01a88658.py --help
-python consistency_calibration_study_01a88658.py --input sample.txt
-python consistency_calibration_study_01a88658.py --input sample.txt --json
+python model_hot_swap_consistency_calibration.py --help
+python model_hot_swap_consistency_calibration.py --input sample.txt
+python model_hot_swap_consistency_calibration.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「校准研究」使用分隔符 `（无）` 区分标签与载荷。
@@ -50,7 +50,7 @@ python consistency_calibration_study_01a88658.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python consistency_calibration_study_01a88658.py --input sample.txt --json`；
+2. 运行 `python model_hot_swap_consistency_calibration.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
